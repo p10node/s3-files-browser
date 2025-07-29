@@ -41,4 +41,4 @@ jobs:
           aws-region: us-west-1
 
       - name: Push data to S3
-        run: aws s3 cp dist/ s3://s3-files.p10node.onl --acl public-read
+        run: aws s3 cp dist/ s3://s3-files.p10node.onl --recursive --acl public-read
