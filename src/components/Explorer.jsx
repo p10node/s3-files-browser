@@ -6,8 +6,6 @@ import { Link as ReactRouterLink, useSearchParams } from "react-router-dom";
 import { formatFileSize, sanitizePrefix } from "../helpers";
 import { useContents } from "../hooks/useContents";
 
-void React;
-
 export default function Explorer() {
     const [searchParams] = useSearchParams();
     const prefix = sanitizePrefix(searchParams.get("prefix") || "");
@@ -150,3 +148,5 @@ function Listing({ prefix }) {
 Listing.propTypes = {
     prefix: PropTypes.string,
 };
+
+void React;
