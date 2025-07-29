@@ -22,15 +22,21 @@
     "email": "pasmen@gmail.com"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.856.0",
     "@babel/core": "7.28.0",
     "@babel/eslint-parser": "7.28.0",
     "@babel/plugin-transform-runtime": "7.28.0",
     "@babel/preset-env": "7.28.0",
     "@babel/preset-react": "7.27.1",
     "@babel/runtime": "^7.28.2",
+    "@chakra-ui/react": "3.23.0",
+    "@emotion/react": "11.14.0",
     "@eslint/compat": "1.3.1",
     "@eslint/js": "9.32.0",
+    "@grafana/faro-web-sdk": "1.19.0",
+    "@tanstack/react-query": "5.83.0",
+    "@tanstack/react-query-devtools": "5.83.0",
     "@testing-library/dom": "10.4.1",
     "@testing-library/jest-dom": "6.6.4",
     "@testing-library/react": "16.3.0",
@@ -56,7 +62,12 @@
     "jest": "30.0.5",
     "jest-environment-jsdom": "30.0.5",
     "prettier": "3.6.2",
+    "prop-types": "15.8.1",
+    "react": "19.1.1",
     "react-dev-utils": "12.0.1",
+    "react-dom": "19.1.1",
+    "react-icons": "5.5.0",
+    "react-router-dom": "7.7.1",
     "serve": "14.2.4",
     "style-loader": "4.0.0",
     "terser-webpack-plugin": "5.3.14",
@@ -64,18 +75,5 @@
     "webpack-cli": "6.0.1",
     "webpack-dev-server": "5.2.2",
     "webpack-merge": "6.0.1"
-  },
-  "dependencies": {
-    "@aws-sdk/client-s3": "3.856.0",
-    "@chakra-ui/react": "3.23.0",
-    "@emotion/react": "11.14.0",
-    "@grafana/faro-web-sdk": "1.19.0",
-    "@tanstack/react-query": "5.83.0",
-    "@tanstack/react-query-devtools": "5.83.0",
-    "prop-types": "15.8.1",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "react-icons": "5.5.0",
-    "react-router-dom": "7.7.1"
   }
 }
