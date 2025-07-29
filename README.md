@@ -1,4 +1,15 @@
-# S3 Browser
+# s3-files.p10node.onl s3 browser index
+
+## ⚠️ Notice
+
+This is a customized version of the explorer specifically for `s3-files.p10node.onl`, forked from [tlinhart/s3-browser](https://github.com/tlinhart/s3-browser), with improvements tailored for the p10node system. It allows you to easily browse and access files within p10node’s `s3-files` bucket.
+
+👉 You can access it directly at: https://s3-files.p10node.onl
+
+🔍 Visit the [p10node/cosmos-registry](https://github.com/p10node/cosmos-registry) repository to see how we generate the file listings under `cosmos/chain-registry`.
+
+
+## Origin README.md
 
 [![CI workflow status][badge]][actions]
 

@@ -6,20 +6,17 @@ const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
-  mode: "production",
-  plugins: [
-    new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/main/]),
-    new InlineIconHtmlPlugin(HtmlWebpackPlugin, [/favicon/]),
-  ],
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          compress: { drop_console: true },
-        },
-      }),
-    ],
-  },
-  devtool: "source-map",
+    mode: "production",
+    plugins: [new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/main/]), new InlineIconHtmlPlugin(HtmlWebpackPlugin, [/favicon/])],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    compress: { drop_console: true },
+                },
+            }),
+        ],
+    },
+    devtool: "source-map",
 });

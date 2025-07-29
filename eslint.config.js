@@ -10,41 +10,41 @@ const testingLibrary = require("eslint-plugin-testing-library");
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 module.exports = [
-  eslint.configs.recommended,
-  {
-    files: ["**/*.{js,jsx}"],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        APP_NAME: "readonly",
-        APP_VERSION: "readonly",
-      },
-      parser: babelParser,
+    eslint.configs.recommended,
+    {
+        files: ["**/*.{js,jsx}"],
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+                ...globals.node,
+                APP_NAME: "readonly",
+                APP_VERSION: "readonly",
+            },
+            parser: babelParser,
+        },
+        plugins: {
+            react: react,
+            "react-hooks": reactHooks,
+        },
+        rules: {
+            ...react.configs.recommended.rules,
+            ...reactHooks.configs.recommended.rules,
+        },
+        settings: {
+            react: {
+                version: "detect",
+            },
+        },
     },
-    plugins: {
-      react: react,
-      "react-hooks": reactHooks,
+    {
+        files: ["**/*.test.{js,jsx}"],
+        ...jest.configs["flat/recommended"],
+        ...jestDom.configs["flat/recommended"],
+        plugins: {
+            "testing-library": fixupPluginRules({ rules: testingLibrary.rules }),
+        },
+        rules: {
+            ...testingLibrary.configs.react.rules,
+        },
     },
-    rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-  },
-  {
-    files: ["**/*.test.{js,jsx}"],
-    ...jest.configs["flat/recommended"],
-    ...jestDom.configs["flat/recommended"],
-    plugins: {
-      "testing-library": fixupPluginRules({ rules: testingLibrary.rules }),
-    },
-    rules: {
-      ...testingLibrary.configs.react.rules,
-    },
-  },
 ];
